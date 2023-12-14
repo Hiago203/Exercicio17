@@ -20,11 +20,20 @@ namespace Exercicio17
         private void button1_Click(object sender, EventArgs e)
         {
 
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             BackColor = Color.Red;
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+
+
+
         }
     }
 }

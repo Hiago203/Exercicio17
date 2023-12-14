@@ -11,11 +11,18 @@ namespace Exercicio17
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Utilizador.Nome = textBox1.Text;
-            Utilizador.Email = textBox2.Text;
-            Utilizador.Password = textBox3.Text;
+            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "")
+            {
+                MessageBox.Show("Foi registado com sucesso");
+            }
+            else
+            {
+                Utilizador.Nome = textBox1.Text;
+                Utilizador.Email = textBox2.Text;
+                Utilizador.Password = textBox3.Text;
 
-            MessageBox.Show("Foi Registado com Sucesso");
+                MessageBox.Show("Foi Registado com Sucesso");
+            }
 
             textBox1.Clear();
             textBox2.Clear();
@@ -39,6 +46,11 @@ namespace Exercicio17
         {
             Form2 frm2 = new Form2();
             frm2.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }
