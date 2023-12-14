@@ -13,7 +13,7 @@ namespace Exercicio17
         {
             if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "")
             {
-                MessageBox.Show("Foi registado com sucesso");
+                MessageBox.Show(" O utilizador foi registado com sucesso");
             }
             else
             {
