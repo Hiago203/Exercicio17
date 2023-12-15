@@ -11,9 +11,13 @@ namespace Exercicio17
         public static string Nome;
         public static string Email;
         public static string Password;
-        List<string> NomeList = new List<string>()
+
+        public Utilizador(string nome, string email, string password)
         {
-          Nome; 
+            Nome = nome;
+            Email = email;
+            Password = password;
+            List<Utilizador> numeros = new List<Utilizador>();
         }
     }
 }

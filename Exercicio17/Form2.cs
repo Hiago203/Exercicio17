@@ -15,6 +15,10 @@ namespace Exercicio17
         public Form2()
         {
             InitializeComponent();
+            foreach (Utilizador numero in Utilizador.
+            {
+                Console.WriteLine(numero);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -25,12 +29,17 @@ namespace Exercicio17
 
         private void button2_Click(object sender, EventArgs e)
         {
-            BackColor = Color.Red;
+            ColorDialog colorDialog = new ColorDialog();
+            DialogResult result = colorDialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                this.BackColor = colorDialog.Color;
+            }
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-          
+
         }
     }
 }

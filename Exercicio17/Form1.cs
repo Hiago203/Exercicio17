@@ -13,7 +13,7 @@ namespace Exercicio17
         {
             if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "")
             {
-                MessageBox.Show(" O utilizador foi registado com sucesso");
+                MessageBox.Show("Falta de informações.");
             }
             else
             {
@@ -21,13 +21,14 @@ namespace Exercicio17
                 Utilizador.Email = textBox2.Text;
                 Utilizador.Password = textBox3.Text;
 
-                MessageBox.Show("Foi Registado com Sucesso");
+                MessageBox.Show("Foi Registado com Sucesso.");
+                button2.Visible = true;
+
+                textBox1.Clear();
+                textBox2.Clear();
+                textBox3.Clear();
+                
             }
-
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Clear();
-
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -50,7 +51,12 @@ namespace Exercicio17
 
         private void button3_Click(object sender, EventArgs e)
         {
-           
+            ColorDialog colorDialog = new ColorDialog();
+            DialogResult result = colorDialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                this.BackColor = colorDialog.Color;
+            }
         }
     }
 }
